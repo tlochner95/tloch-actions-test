@@ -3,11 +3,12 @@ name: Sync Dags folder with S3
 on:
   push:
     branches:
-    - master
+    - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: dev
     steps:
     - uses: actions/checkout@master
     - uses: jakejarvis/s3-sync-action@master

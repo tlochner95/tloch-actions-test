@@ -1,4 +1,4 @@
-name: "Check PR content doe not contain DEV"
+name: "Check PR content does not contain DEV"
 on: [pull_request]
 
 jobs:

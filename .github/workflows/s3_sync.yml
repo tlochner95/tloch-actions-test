@@ -10,7 +10,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: ${{ github.base_ref == 'main' && 'production' || github.base_ref }}
+    environment: ${{ github.ref_name == 'main' && 'production' || github.ref_name }}
     steps:
     - uses: actions/checkout@master
     - uses: jakejarvis/s3-sync-action@master
